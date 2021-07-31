@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    ports:
+      - 8080:8080
+    build: ./example-backend
+    volumes:
+      - ./example-backend:/mydir/backend
+    environment:
+      - REQUEST_ORIGIN=http://localhost:5000
+    command: ./server
+    container_name: back
+  frontend:
+    ports:
+      - 5000:5000
+    build: ./example-frontend
+    volumes:
+      - ./example-frontend:/mydir/frontend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080
+    command: ["serve", "-s", "-l", "5000", "build"]
+    container_name: front
