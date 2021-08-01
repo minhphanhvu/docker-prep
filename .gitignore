@@ -10,3 +10,5 @@ part1/part1.14/backend/example-backend
 part2/2.3/example-backend
 part2/2.3/example-frontend
 psweb
+*.csr
+*.cnf
