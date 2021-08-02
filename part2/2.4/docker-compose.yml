@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  backend:
+    ports:
+      - 8080:8080
+    build: ./example-backend
+    volumes:
+      - ./example-backend:/mydir/backend
+    environment: 
+      - REDIS_HOST=redis-service
+    container_name: back
+  frontend:
+    ports:
+      - 5000:5000
+    build: ./example-frontend
+    volumes:
+      - ./example-frontend:/mydir/frontend
+    container_name: front
+  redis-service:
+    image: redis
+    container_name: cache
