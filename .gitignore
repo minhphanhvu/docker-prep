@@ -16,3 +16,6 @@ psweb
 *.srl
 part2/2.5/scaling-exercise
 !part2/2.5/scaling-exercise/docker-compose.yml
+part2/2.6/example-backend
+part2/2.6/example-frontend
+material-applications
