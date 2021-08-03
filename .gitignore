@@ -12,3 +12,7 @@ part2/2.3/example-frontend
 psweb
 *.csr
 *.cnf
+*.pem
+*.srl
+part2/2.5/scaling-exercise
+!part2/2.5/scaling-exercise/docker-compose.yml
